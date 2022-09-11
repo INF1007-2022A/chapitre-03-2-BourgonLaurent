@@ -21,18 +21,26 @@ def average(values: List[int]) -> float:
 
 
 def bills(value):
-    # TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
+    """Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur."""
+    twenties = 0
+    tens = 0
+    fives = 0
+    ones = 0
     while value != 0:
         if value >= 20:
-            pass
+            value -= 20
+            twenties += 1
         elif value >= 10:
-            pass
+            value -= 10
+            tens += 1
         elif value >= 5:
-            pass
+            value -= 5
+            fives += 1
         elif value >= 1:
-            pass
+            value -= 1
+            ones += 1
 
-    return (twenties, tens, fives, twos, ones)
+    return (twenties, tens, fives, ones)
 
 
 def format_base(value, base, digit_letters):
